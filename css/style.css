@@ -464,11 +464,34 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
+}
+.screen::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: blur(7px);
+          filter: blur(7px);
+  opacity: 0.5;
 }
 .screen--contacts {
   background-image: url(../img/bg-contacts.jpg);
 }
+.screen--contacts::after {
+  background-image: url(../img/bg-contacts.jpg);
+}
 .screen--404 {
+  background-image: url(../img/bg-404.jpg);
+}
+.screen--404::after {
   background-image: url(../img/bg-404.jpg);
 }
 .header {
@@ -642,6 +665,12 @@ button {
   }
   .info--404 p {
     max-width: 320px;
+  }
+  .screen {
+    background-image: none;
+  }
+  .screen::after {
+    display: block;
   }
 }
 @media (max-width: 480px) {
