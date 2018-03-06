@@ -478,9 +478,9 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  -webkit-filter: blur(7px);
-          filter: blur(7px);
-  opacity: 0.85;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  opacity: 0.1;
 }
 .screen--contacts {
   background-image: url(../img/bg-contacts.jpg);
@@ -675,11 +675,18 @@ button {
   }
 }
 @media (max-width: 480px) {
+  .info h1 {
+    font-size: 44px;
+  }
   .info--404 h1 {
-    font-size: 48px;
+    font-size: 52px;
+    margin-bottom: 18px;
   }
   .info--404 .btn--link {
     margin-bottom: 20px;
+  }
+  .info--404 .btn--feedback {
+    padding-bottom: 0;
   }
   .info__btns {
     -ms-flex-wrap: wrap;
@@ -689,8 +696,14 @@ button {
     width: 100%;
     margin-top: 20px;
   }
-  .info h1 {
-    font-size: 44px;
+  .info__list {
+    line-height: 1.2;
+  }
+  .info__list li {
+    margin-bottom: 10px;
+  }
+  .info__list li::before {
+    top: 5px;
   }
 }
 @media (max-width: 760px) and (orientation: landscape) {
