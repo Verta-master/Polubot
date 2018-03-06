@@ -573,6 +573,7 @@ button {
 }
 .btn {
   height: 40px;
+  font-weight: 700;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
