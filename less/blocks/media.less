@@ -37,12 +37,19 @@
 }
 //-----------------------------
 @media (max-width: 480px) {
+  .info h1 {
+    font-size: 44px;
+  }
   .info--404 {
     h1 {
-      font-size: 48px;
+      font-size: 52px;
+      margin-bottom: 18px;
     }
     .btn--link {
       margin-bottom: 20px;
+    }
+    .btn--feedback {
+      padding-bottom: 0;
     }
   }
   .info__btns {
@@ -52,8 +59,16 @@
     width: 100%;
     margin-top: 20px;
   }
-  .info h1 {
-    font-size: 44px;
+  .info__list {
+    line-height: 1.2;
+    
+    li {
+      margin-bottom: 10px;
+      
+      &::before {
+        top: 5px;
+      }
+    }
   }
 }
 //--------------------------
