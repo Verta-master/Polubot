@@ -404,7 +404,7 @@ body {
   font-family: "Museo Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 21px;
-  font-weight: 500;
+  font-weight: 700;
   color: #333333;
   letter-spacing: 0.025em;
 }
@@ -522,7 +522,7 @@ button {
   margin-top: 0;
 }
 .info--404 .info__block {
-  max-width: 450px;
+  max-width: 460px;
 }
 .info--404 .btn--link {
   margin-right: 20px;
@@ -531,7 +531,7 @@ button {
   margin-top: 30px;
 }
 .info__block {
-  max-width: 400px;
+  max-width: 410px;
 }
 .info__list {
   font-weight: 700;
@@ -573,6 +573,7 @@ button {
 }
 .btn {
   height: 40px;
+  padding-bottom: 2px;
   font-weight: 700;
   display: -webkit-box;
   display: -ms-flexbox;
