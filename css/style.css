@@ -651,13 +651,11 @@ button {
   }
 }
 @media (max-width: 1022px) {
-  .screen--contacts {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+  .screen {
+    background-image: none;
   }
-  .info--contacts {
-    padding-top: 150px;
+  .screen::after {
+    display: block;
   }
 }
 @media (max-width: 760px) {
@@ -666,12 +664,6 @@ button {
   }
   .info--404 p {
     max-width: 320px;
-  }
-  .screen {
-    background-image: none;
-  }
-  .screen::after {
-    display: block;
   }
 }
 @media (max-width: 480px) {
