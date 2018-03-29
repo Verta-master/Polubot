@@ -1,5 +1,32 @@
+@keyframes onLoad {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    visibility: hidden;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
 .info {
   h1 {
+    display: inline-block;
+    overflow: hidden;
     margin-left: -5px;
     margin-bottom: 18px;
     margin-top: 0;
@@ -9,6 +36,24 @@
     line-height: 1.2;
     text-transform: uppercase;
     letter-spacing: 0.025em;
+    position: relative;
+    animation-name: onLoad;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #0c9;
+      animation-name: slideInLeft;
+      animation-duration: 1.2s;
+      animation-fill-mode: forwards;
+    }
   }
   
   a {
@@ -19,6 +64,29 @@
   a:hover,
   a:active {
     text-decoration: none;
+  }
+  
+  p span {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    animation-name: onLoad;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #0c9;
+      animation-name: slideInLeft;
+      animation-duration: 1.5s;
+      animation-fill-mode: forwards;
+    }
   }
   
   &--404 {
@@ -55,6 +123,7 @@
 
 .info__block {
   max-width: 410px;
+  overflow: hidden;
 }
 
 .info__list {
