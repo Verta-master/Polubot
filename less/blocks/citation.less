@@ -1,0 +1,49 @@
+.citation {
+  overflow: hidden;
+  min-height: 538px;
+  padding-top: 120px;
+  color: #fff;
+  text-align: center;
+  background-color: rgb(27, 27, 27);
+  background-image: url(../img/bg-photo.png);
+  background-size: 728px 538px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  
+  blockquote {
+    position: relative;
+    margin-bottom: 100px;
+    font-family: "Playfair Display", "Arial", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.025em;
+    
+    &::before {
+      content: "“";
+      position: absolute;
+      top: 0;
+      left: 80px;
+      color: #4f4f4f;
+      font-size: 100px;
+      font-weight: 700;
+      opacity: 0.33;
+    }
+    
+    &::after {
+      content: "“";
+      position: absolute;
+      bottom: 0;
+      right: 80px;
+      color: #4f4f4f;
+      font-size: 100px;
+      font-weight: 700;
+      opacity: 0.33;
+      transform: rotate(180deg);
+    }
+  }
+  
+  p {
+    line-height: 20px;
+  }
+}
