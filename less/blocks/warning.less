@@ -1,0 +1,40 @@
+.warning {
+  position: relative;
+  text-align: center;
+  padding-top: 130px;
+  padding-bottom: 130px;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 370px;
+    left: ~"calc(50% - 255px)";
+    width: 36px;
+    height: 34px;
+    background-image: url(../img/icon-arrow-red.svg);
+    background-repeat: no-repeat;
+  }
+  
+  h2 {
+    color: #e40d0d;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  
+  p {
+    max-width: 690px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 20px;
+  }
+  
+  .btn--feedback {
+    width: 131px;
+    margin-left: 20px;
+  }
+  
+  .info__btns {
+    justify-content: center;
+  }
+}
