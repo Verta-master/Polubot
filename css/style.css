@@ -903,6 +903,91 @@ button {
   text-transform: none;
   letter-spacing: 0.025em;
 }
+.citation {
+  overflow: hidden;
+  min-height: 538px;
+  padding-top: 120px;
+  color: #fff;
+  text-align: center;
+  background-color: #1b1b1b;
+  background-image: url(../img/bg-photo.png);
+  background-size: 728px 538px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.citation blockquote {
+  position: relative;
+  margin-bottom: 100px;
+  font-family: "Playfair Display", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.025em;
+}
+.citation blockquote::before {
+  content: "“";
+  position: absolute;
+  top: 0;
+  left: 80px;
+  color: #4f4f4f;
+  font-size: 100px;
+  font-weight: 700;
+  opacity: 0.33;
+}
+.citation blockquote::after {
+  content: "“";
+  position: absolute;
+  bottom: 0;
+  right: 80px;
+  color: #4f4f4f;
+  font-size: 100px;
+  font-weight: 700;
+  opacity: 0.33;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.citation p {
+  line-height: 20px;
+}
+.form {
+  background-color: #2f2f2f;
+}
+.form span {
+  color: #fff;
+  font-family: "Playfair Display", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+}
+.form__wrap {
+  min-height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.form__input {
+  width: 445px;
+  padding-bottom: 5px;
+  color: #8b8a8a;
+  letter-spacing: 0.05em;
+  background-color: rgba(255, 255, 255, 0);
+  border-bottom: 2px solid #8b8a8a;
+}
+.form__submit {
+  width: 138px;
+  height: 36px;
+  margin-right: 35px;
+  color: #8b8a8a;
+  letter-spacing: 0.05em;
+  border-radius: 20px;
+  border: 2px solid #8b8a8a;
+}
 @media (max-width: 1169px) {
   .wrapper {
     width: 100%;
