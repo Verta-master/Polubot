@@ -1517,6 +1517,12 @@ button {
   .approach h2 {
     font-size: 36px;
   }
+  .warning p {
+    max-width: 500px;
+  }
+  .warning::after {
+    top: 400px;
+  }
 }
 @media (max-width: 480px) {
   .info h1 {
@@ -1625,6 +1631,18 @@ button {
   .approach h2::after {
     display: none;
   }
+  .screen__next {
+    bottom: 20px;
+  }
+  .screen--promo {
+    padding-bottom: 80px;
+  }
+  .screen--promo .info__btns {
+    max-width: 300px;
+  }
+  .warning::after {
+    display: none;
+  }
 }
 @media (max-width: 760px) and (orientation: landscape) {
   .screen--contacts {
@@ -1633,5 +1651,11 @@ button {
   .info--contacts {
     padding-top: 100px;
     padding-bottom: 50px;
+  }
+  .screen--promo {
+    padding-bottom: 30px;
+  }
+  .screen__next {
+    bottom: 0;
   }
 }
