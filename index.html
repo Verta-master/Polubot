@@ -95,10 +95,9 @@
           <h3>/ ИНДИВИДУАЛЬНЫЙ ПОДХОД</h3>
           <p>Чем больше бизнес, тем сложнее определить долю ответственности отдельного работника, сказать, кто именно выполняет часть работы, и из-за кого был завален какой-то этап процесса. Но в фирме из одного человека нет других сотрудников, чтобы свалить на них плохое исполнение. Тут уж без вариантов. Я-единственный, кто полностью отвечает за контроль качества.</p>
           <p>Да, в проекте могут работать другие специалисты, но это делается так же из соображения качества, это может быть обработка фото, или сложное программирование  и интеграция с различными системами. Но в итоге за качество всего проекта отвечаю только я. Для меня это не груз, для меня это возможность проявить себя и сделать крутой и качественный проект.</p>
-          <img class="approach__img" src="img/bg-img.jpg" alt="ИНДИВИДУАЛЬНЫЙ ПОДХОД" width="536" height="340">
         </div>
       </div>
-      <img src="img/bg-approach.jpg" alt="ИНДИВИДУАЛЬНЫЙ ПОДХОД" width="1918" height="663">
+      <img class="approach__img" src="img/bg-approach.jpg" alt="ИНДИВИДУАЛЬНЫЙ ПОДХОД" width="1918" height="843">
     </section>
     
     <section class="work wrapper">
@@ -118,24 +117,44 @@
     </section>
     
     <section class="review">
-      <div class="wrapper review__wrap">
-        <h2>отзывы</h2>
-        <div class="review__slider">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <button type="button" class="review__play"></button>
+      <div class="swiper-container review__slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide review__slide">
+            <button type="button" class="review__play">
+              <img src="img/ic_play_arrow_white_24px.svg" alt="отзывы" width="24" height="24">
+            </button>
+            <figure class="review__img">
+              <img src="img/bg-review.jpg" alt="отзывы" width="1920" height="500">
+            </figure>
+            <div class="wrapper review__wrap">
+              <h2>отзывы</h2>
+              <div class="review__text">
                 <h3>Фаворит-Юг</h3>
-                <p class="review__text">«Репутация и реклама — это всё то, что приближает нас к деньгам. А денег, как известно, много не бывает. Поэтому не бывает много и рекламы</p>
+                <p>«Репутация и реклама — это всё то, что приближает нас к деньгам. А денег, как известно, много не бывает. Поэтому не бывает много и рекламы</p>
                 <p class="review__author">Сергей Стринадкин</p>
               </div>
-              
             </div>
-            <div class="swiper-pagination review__pagination"></div>
-            <div class="swiper-button-prev review__prev"></div>
-            <div class="swiper-button-next review__next"></div>
+          </div>
+          <div class="swiper-slide review__slide">
+            <button type="button" class="review__play">
+              <img src="img/ic_play_arrow_white_24px.svg" alt="отзывы" width="24" height="24">
+            </button>
+            <figure class="review__img">
+              <img src="img/bg-review.jpg" alt="отзывы" width="1920" height="500">
+            </figure>
+            <div class="wrapper review__wrap">
+              <h2>отзывы</h2>
+              <div class="review__text">
+                <h3>Фаворит-Юг</h3>
+                <p>«Репутация и реклама — это всё то, что приближает нас к деньгам. А денег, как известно, много не бывает. Поэтому не бывает много и рекламы</p>
+                <p class="review__author">Сергей Стринадкин</p>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="swiper-pagination review__pagination"></div>
+        <div class="swiper-button-prev review__prev"></div>
+        <div class="swiper-button-next review__next"></div>
       </div>
     </section>
     
@@ -155,14 +174,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
   <!-- Slider -->
   <script>
-    var mySwiper = new Swiper ('.slider', {
+    var mySwiper = new Swiper ('.review__slider', {
       pagination: {
-        el: '.slider__pagination',
+        el: '.review__pagination',
+        type: 'fraction',
         clickable: true,
       },
       navigation: {
-        nextEl: '.slider__next',
-        prevEl: '.slider__prev',
+        nextEl: '.review__next',
+        prevEl: '.review__prev',
       },
     })
   </script>
