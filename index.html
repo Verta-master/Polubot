@@ -5,6 +5,7 @@
   <meta  name="viewport" content="width=device-width,initial-scale=1">
   <title>Алексей Полубот</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -50,7 +51,7 @@
       <p>Будет много текста который расскажет вам о том кто я, как мыслю и какие цели преследую.<br>Без фальши, без СЕО бреда. Прочитав который вы поймете подхожу ли я вам или нет, но если вы уже знаете зачем вы пришли, то связжитесь со мной или посмотрите мои работы.</p>
       <div class="info__btns">
         <a href="#" class="btn btn--red">Нет времени, в работы!</a>
-        <a href="#" class="btn btn--feedback">Контакты</a>
+        <a href="contacts.html" class="btn btn--feedback">Контакты</a>
       </div>
     </section>
     
@@ -120,9 +121,12 @@
       <div class="swiper-container review__slider">
         <div class="swiper-wrapper">
           <div class="swiper-slide review__slide">
-            <button type="button" class="review__play">
+            <a data-fancybox data-src="#review__video-1" href="javascript:;" class="review__play">
               <img src="img/ic_play_arrow_white_24px.svg" alt="отзывы" width="24" height="24">
-            </button>
+            </a>
+            <div style="display: none;" id="review__video-1" class="review__video">
+              <iframe src="https://www.youtube.com/embed/hqYIe5Y76oY" allowfullscreen></iframe>
+            </div>
             <figure class="review__img">
               <img src="img/bg-review.jpg" alt="отзывы" width="1920" height="500">
             </figure>
@@ -136,9 +140,12 @@
             </div>
           </div>
           <div class="swiper-slide review__slide">
-            <button type="button" class="review__play">
+            <a data-fancybox data-src="#review__video-2" href="javascript:;" class="review__play">
               <img src="img/ic_play_arrow_white_24px.svg" alt="отзывы" width="24" height="24">
-            </button>
+            </a>
+            <div style="display: none;" id="review__video-2" class="review__video">
+              <iframe src="https://www.youtube.com/embed/hqYIe5Y76oY" allowfullscreen></iframe>
+            </div>
             <figure class="review__img">
               <img src="img/bg-review.jpg" alt="отзывы" width="1920" height="500">
             </figure>
@@ -171,7 +178,9 @@
     
   </footer>
   
+  <script src="js/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
   <!-- Slider -->
   <script>
     var mySwiper = new Swiper ('.review__slider', {
@@ -184,7 +193,22 @@
         nextEl: '.review__next',
         prevEl: '.review__prev',
       },
+      simulateTouch: false,
+      preventClicks: false,
+      preventClicksPropagation: false,
     })
+  </script>
+  
+  <!-- Scroll to 2nd screen -->
+  <script>
+    $(document).ready(function(){
+      $(".screen__next").on("click", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+          top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 500);
+      });
+    });
   </script>
 </body>
 </html>
