@@ -73,7 +73,10 @@
   }
   
   &--promo {
+    padding-bottom: 162px;
+    justify-content: flex-end;
     background-image: url(../img/bg-main.jpg);
+    background-position: bottom 20px center;
     
     &::after {
       background-image: url(../img/bg-main.jpg);
@@ -81,6 +84,7 @@
     
     h1 {
       margin-left: 0;
+      margin-bottom: 45px;
       font-size: 18px;
       font-weight: 900;
       text-transform: uppercase;
@@ -92,19 +96,29 @@
       line-height: 54px;
       font-weight: 900;
       text-transform: uppercase;
+      letter-spacing: 0.025em;
+      padding-bottom: 2px;
       
       span {
+        position: relative;
+        left: -8px;
+        bottom: 2px;
         color: #b4b4b4;
         font-family: "Playfair Display", "Arial", sans-serif;
         font-size: 14px;
         font-weight: 700;
         line-height: 18px;
         text-transform: none;
+        letter-spacing: 0.025em;
       }
     }
     
     .info__block {
-      max-width: 650px;
+      max-width: 670px;
+    }
+    
+    .info__btns {
+      padding-top: 7px;
     }
     
     .btn--link {
@@ -113,14 +127,14 @@
     }
     
     .btn--feedback {
-      width: 160px;
+      width: 164px;
     }
   }
 }
 
 .screen__next {
   position: absolute;
-  bottom: 40px;
+  bottom: 45px;
   left: 50%;
   transform: translateX(-50%);
 }
