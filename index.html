@@ -35,7 +35,7 @@
         </div>
         <div class="info__show">
           <div class="info__btns">
-            <a href="#" class="btn btn--link">Подробнее</a>
+            <a href="#" class="btn btn--grey">Подробнее</a>
             <a href="#" class="btn btn--feedback" download>Скачать бриф</a>
           </div>
         </div>
@@ -118,6 +118,7 @@
     </section>
     
     <section class="review">
+      <h2>отзывы</h2>
       <div class="swiper-container review__slider">
         <div class="swiper-wrapper">
           <div class="swiper-slide review__slide">
@@ -131,11 +132,10 @@
               <img src="img/bg-review.jpg" alt="отзывы" width="1920" height="500">
             </figure>
             <div class="wrapper review__wrap">
-              <h2>отзывы</h2>
               <div class="review__text">
                 <h3>Фаворит-Юг</h3>
                 <p>«Репутация и реклама — это всё то, что приближает нас к деньгам. А денег, как известно, много не бывает. Поэтому не бывает много и рекламы</p>
-                <p class="review__author">Сергей Стринадкин</p>
+                <a href="#" class="review__author">Сергей Стринадкин</a>
               </div>
             </div>
           </div>
@@ -150,11 +150,10 @@
               <img src="img/bg-review.jpg" alt="отзывы" width="1920" height="500">
             </figure>
             <div class="wrapper review__wrap">
-              <h2>отзывы</h2>
               <div class="review__text">
                 <h3>Фаворит-Юг</h3>
                 <p>«Репутация и реклама — это всё то, что приближает нас к деньгам. А денег, как известно, много не бывает. Поэтому не бывает много и рекламы</p>
-                <p class="review__author">Сергей Стринадкин</p>
+                <a href="#" class="review__author">Сергей Стринадкин</a>
               </div>
             </div>
           </div>
@@ -193,6 +192,10 @@
         nextEl: '.review__next',
         prevEl: '.review__prev',
       },
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true,
+      },
       simulateTouch: false,
       preventClicks: false,
       preventClicksPropagation: false,
@@ -208,7 +211,18 @@
           top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 500);
       });
+      
+      $(document).on("scroll", onScroll);
     });
+    
+    function onScroll(event) {
+      var scrollPos = $(document).scrollTop();
+      if (scrollPos > 150) {
+        $(".screen__next").fadeOut();
+      } else {
+        $(".screen__next").fadeIn();
+      }
+    }
   </script>
 </body>
 </html>

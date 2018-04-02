@@ -83,7 +83,7 @@
     }
     
     h1 {
-      margin-left: 0;
+      margin-left: 2px;
       margin-bottom: 45px;
       font-size: 18px;
       font-weight: 900;
@@ -122,8 +122,7 @@
       padding-top: 7px;
     }
     
-    .btn--link {
-      width: 147px;
+    .btn--grey {
       margin-right: 20px;
     }
     
@@ -133,9 +132,19 @@
   }
 }
 
+@keyframes bounce {
+  from {
+    transform: translate3d(0,5px,0);
+  }
+  to {
+    transform: translate3d(0,-5px,0);
+  }
+}
+
 .screen__next {
   position: absolute;
   bottom: 45px;
   left: 50%;
   transform: translateX(-50%);
+  animation: bounce .5s infinite alternate;
 }
