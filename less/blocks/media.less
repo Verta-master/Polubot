@@ -7,9 +7,6 @@
       margin-top: 0;
     }
   }
-  .about__block h2 span {
-    top: -30px;
-  }
   .about__wrap {
     align-items: flex-end;
     
@@ -56,6 +53,9 @@
   .approach p {
     padding-right: 30px;
   }
+  .approach h2 {
+    font-size: 48px;
+  }
 }
 //---------------------------
 @media (max-width: 1022px) {
@@ -91,7 +91,7 @@
     width: 250px;
   }
   .approach h2 {
-    font-size: 42px;
+    font-size: 36px;
     line-height: 1.1;
   }
   .approach h3 {
@@ -102,6 +102,12 @@
   }
   .review__play {
     top: 100px;
+  }
+  .approach__title::after {
+    right: -70px;
+  }
+  .work h2 {
+    font-size: 48px;
   }
 }
 //--------------------------
@@ -149,7 +155,7 @@
     max-width: 500px;
   }
   .warning::after {
-    top: 400px;
+    display: none;
   }
   .review h2 {
     top: 0;
@@ -170,10 +176,9 @@
   .about__wrap .about__block {
     padding-left: 0;
     width: 100%;
-    
-    h2 {
-      margin-top: 60px;
-    }
+  }
+  .about__title {
+    margin-top: 60px;
   }
   .about__wrap img {
     width: auto;
@@ -191,7 +196,7 @@
   .approach {
     padding-top: 30px;
   }
-  .work h2 {
+  .work__title {
     margin-top: 60px;
   }
 }
@@ -200,14 +205,15 @@
   .approach {
     padding-top: 30px;
     
-    h2 {
-      margin-bottom: 50px;
-    }
-    
     h3 {
-      margin-bottom: 18px;
       line-height: 1.2;
     }
+  }
+  .approach__title {
+    margin-bottom: 50px;
+  }
+  .approach__h3 {
+    margin-bottom: 18px;
   }
   .approach__column--right {
     padding-top: 5px;
@@ -287,11 +293,9 @@
   .about__block h2 {
     line-height: 1.1;
     font-size: 40px;
+  }
+  .about__title {
     margin-bottom: 5px;
-    
-    span {
-      top: -25px;
-    }
   }
   .warning h2 {
     font-size: 26px;
