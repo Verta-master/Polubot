@@ -1,0 +1,162 @@
+.modal {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  
+  .fancybox-close-small {
+    outline: none;
+    
+    &::before {
+      content: "Закрыть";
+      position: absolute;
+      top: 8px;
+      right: 40px;
+      color: #333333;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    
+    &::after {
+      color: #333333;
+      font-size: 30px;
+      outline: none;
+    }
+    
+    &:hover,
+    &:active {
+      &::after {
+        background-color: rgba(255,255,255,0);
+        outline: none;
+      }
+    }
+  }
+}
+
+.fancybox-is-open .fancybox-bg {
+  opacity: 0.5;
+}
+
+.modal__list {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  height: 325px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.modal__item {
+  margin-bottom: 23px;
+  margin-right: 90px;
+  
+  a {
+    width: 195px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  
+  span {
+    color: #a8a8a8;
+    letter-spacing: 0.05em;
+    transition: ease-out 0.3s;
+  }
+  
+  svg {
+    width: 18px;
+    height: 18px;
+    margin-top: 5px;
+    fill: #a8a8a8;
+    transition: ease-out 0.3s;
+  }
+  
+  &:hover,
+  &:active {
+    span {
+      color: #000;
+      transition: ease-out 0.3s;
+    }
+    svg {
+      fill: #000;
+      transition: ease-out 0.3s;
+    }
+  }
+}
+
+.modal__bottom {
+  background-color: #f4f4f4;
+  font-weight: 500;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  
+  p {
+    margin: 0;
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.slideOutDown {
+  animation-name: slideOutDown;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  animation-name: slideInUp;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+}

@@ -73,13 +73,14 @@
   }
   
   &--promo {
-    padding-bottom: 123px;
+    padding-bottom: 45px;
     justify-content: flex-end;
     background-image: url(../img/bg-main.jpg);
     background-position: bottom -20px center;
     
     &::after {
-      background-image: url(../img/bg-main.jpg);
+//      background-image: url(../img/bg-main.jpg);
+      display: none;
     }
     
     h1 {
@@ -142,10 +143,7 @@
 }
 
 .screen__next {
-  position: absolute;
-  z-index: 50;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
+  display: block;
+  margin-top: 90px;
   animation: bounce .5s infinite alternate;
 }

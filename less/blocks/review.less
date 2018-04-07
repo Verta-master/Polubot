@@ -2,16 +2,20 @@
   position: relative;
   color: #fff;
   
-  h2 {
+  .info__show {
     position: absolute;
     z-index: 5;
-    top: 180px;
+    top: 225px;
     left: ~"calc(50% - 555px)";
+  }
+  
+  h2 {
     font-size: 52px;
     line-height: 54px;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.025em;
+    margin: 0;
   }
 }
 
@@ -34,6 +38,11 @@
   min-height: 500px;
 }
 
+.review__icon {
+  fill: #fff;
+  transition: ease-out 0.3s;
+}
+
 .review__play {
   position: absolute;
   z-index: 15;
@@ -48,9 +57,22 @@
   align-items: center;
   border-radius: 50%;
   border: 2px solid #fff;
+  outline: none;
+  transition: ease-out 0.3s;
   
   img {
     display: block;
+  }
+  
+  &:hover,
+  &:active {
+    background-color: #fff;
+    transition: ease-out 0.3s;
+    
+    .review__icon {
+      fill: #333;
+      transition: ease-out 0.3s;
+    }
   }
 }
 
