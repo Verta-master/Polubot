@@ -5,15 +5,18 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  font-family: "Museo Sans", "Arial", sans-serif;
   
   .fancybox-close-small {
     outline: none;
+    right: 30px;
+    top: 25px;
     
     &::before {
       content: "Закрыть";
       position: absolute;
-      top: 8px;
-      right: 40px;
+      top: 7px;
+      right: 35px;
       color: #333333;
       font-size: 13px;
       font-weight: 700;
@@ -115,7 +118,7 @@
 .slideOutDown {
   animation-name: slideOutDown;
   animation-duration: 0.3s;
-  animation-fill-mode: both;
+  animation-fill-mode: forwards;
 }
 
 @keyframes slideInUp {
@@ -132,7 +135,7 @@
 .slideInUp {
   animation-name: slideInUp;
   animation-duration: 0.3s;
-  animation-fill-mode: both;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadeInUp {
