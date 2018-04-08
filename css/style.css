@@ -1529,37 +1529,41 @@ button {
   padding: 0;
   margin: 0;
   position: absolute;
+  z-index: 15;
   bottom: 0;
   left: 0;
   font-family: "Museo Sans", "Arial", sans-serif;
+  background-color: #fff;
+  display: none;
 }
-.modal .fancybox-close-small {
-  outline: none;
-  right: 30px;
-  top: 25px;
-}
-.modal .fancybox-close-small::before {
-  content: "Закрыть";
+.modal__close {
   position: absolute;
-  top: 7px;
-  right: 35px;
+  right: 30px;
+  top: 35px;
+  padding-right: 25px;
   color: #333333;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.05em;
 }
-.modal .fancybox-close-small::after {
-  color: #333333;
+.modal__close::after {
+  content: "+";
+  position: absolute;
+  top: 0;
+  right: 0;
   font-size: 30px;
-  outline: none;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
-.modal .fancybox-close-small:hover::after,
-.modal .fancybox-close-small:active::after {
-  background-color: rgba(255, 255, 255, 0);
-  outline: none;
-}
-.fancybox-is-open .fancybox-bg {
-  opacity: 0.5;
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .modal__list {
   padding-top: 80px;
@@ -1631,8 +1635,14 @@ button {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.modal__bottom p {
+.screen--promo .modal__bottom p {
   margin: 0;
+  font-size: 13px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #333333;
+  letter-spacing: 0.025em;
+  text-transform: none;
 }
 @-webkit-keyframes slideOutDown {
   from {
@@ -1687,6 +1697,7 @@ button {
   }
 }
 .slideInUp {
+  display: block;
   -webkit-animation-name: slideInUp;
           animation-name: slideInUp;
   -webkit-animation-duration: 0.3s;
@@ -1804,6 +1815,9 @@ button {
   .screen__next {
     margin-top: 30px;
   }
+  .screen h1 {
+    margin-left: 0;
+  }
 }
 @media (max-width: 1022px) {
   .screen {
@@ -1894,9 +1908,6 @@ button {
   .info__block {
     max-width: none;
   }
-  .info--404 p {
-    max-width: 320px;
-  }
   .screen--promo p {
     font-size: 30px;
   }
@@ -1982,8 +1993,43 @@ button {
   .modal__item {
     margin-right: 15px;
   }
+  .info--contacts .info__block {
+    max-width: 600px;
+  }
+  .modal .fancybox-close-small::after {
+    right: -5px;
+  }
+  .modal .fancybox-close-small::before {
+    top: 10px;
+  }
+  .modal {
+    top: 0;
+    bottom: auto;
+    min-height: 100vh;
+  }
+  .slideInUp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .modal__bottom {
+    margin-top: auto;
+  }
 }
 @media (max-width: 480px) {
+  .info__show--grey p {
+    color: #000;
+  }
   .screen--promo {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(30%, rgba(255, 255, 255, 0)), color-stop(70%, rgba(255, 255, 255, 0.8)), to(#ffffff)), url(../img/bg-main.jpg);
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.8) 70%, #ffffff 100%), url(../img/bg-main.jpg);
@@ -2019,6 +2065,10 @@ button {
   }
   .info--404 .btn--feedback {
     padding-bottom: 0;
+  }
+  .info--404 p {
+    max-width: 250px;
+    line-height: 1.2;
   }
   .info__btns {
     -ms-flex-wrap: wrap;
