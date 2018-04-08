@@ -36,13 +36,104 @@
         <div class="info__show animateline">
           <div class="info__btns">
             <a href="#" class="btn btn--grey">Подробнее</a>
-            <a data-fancybox data-src="#brief" href="javascript:;" class="btn btn--feedback btn--brief">Скачать бриф</a>
+            <a href="#" class="btn btn--feedback btn--brief">Скачать бриф</a>
           </div>
         </div>
       </div>
       <a href="#warning" class="screen__next">
         <img src="img/ic_arrow_downward_black_24px.svg" alt="Подробнее" width="24" height="24">
       </a>
+      
+      <!-- Modal window -->
+      <svg style="display:none">
+        <symbol id="icon-download">
+          <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+        </symbol>
+      </svg>
+      <div class="overlay"></div>
+      <div id="brief" class="modal">
+        <button type="button" class="modal__close">Закрыть</button>
+        <ul class="wrapper modal__list">
+          <li class="modal__item">
+            <a href="#" download>
+              <span>Разработка сайта</span>
+              <svg class="modal__download" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon-download"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="modal__item">
+            <a href="#" download>
+              <span>Имиджевая съемка</span>
+              <svg class="modal__download" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon-download"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="modal__item">
+            <a href="#" download>
+              <span>Предметная съемка</span>
+              <svg class="modal__download" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon-download"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="modal__item">
+            <a href="#" download>
+              <span>Съемка видеоролика</span>
+              <svg class="modal__download" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon-download"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="modal__item">
+            <a href="#" download>
+              <span>Создание логотипа</span>
+              <svg class="modal__download" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon-download"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="modal__item">
+            <a href="#" download>
+              <span>Фирменный стиль</span>
+              <svg class="modal__download" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon-download"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="modal__item">
+            <a href="#" download>
+              <span>Нейминг</span>
+              <svg class="modal__download" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon-download"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="modal__item">
+            <a href="#" download>
+              <span>Брендинг с нуля</span>
+              <svg class="modal__download" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon-download"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="modal__item">
+            <a href="#" download>
+              <span>Разработка упаковки</span>
+              <svg class="modal__download" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon-download"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="modal__bottom">
+          <div class="wrapper">
+            <p>Если вдруг, Вы не нашли необходимый бриф, свяжитесь со мной и я с удовольствием отвечу на все интересующие Вас вопросы!</p>
+          </div>
+        </div>
+      </div>
     </section>
     
     <section class="warning wrapper" id="warning">
@@ -216,96 +307,7 @@
   <footer class="footer">
     
   </footer>
-  
-<!-- Modal window -->
-  <svg style="display:none">
-    <symbol id="icon-download">
-      <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-      <path d="M0 0h24v24H0z" fill="none"/>
-    </symbol>
-  </svg>
-  <div style="display: none;" id="brief" class="modal">
-    <ul class="wrapper modal__list">
-      <li class="modal__item">
-        <a href="#" download>
-          <span>Разработка сайта</span>
-          <svg class="modal__download" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <use href="#icon-download"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="modal__item">
-        <a href="#" download>
-          <span>Имиджевая съемка</span>
-          <svg class="modal__download" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <use href="#icon-download"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="modal__item">
-        <a href="#" download>
-          <span>Предметная съемка</span>
-          <svg class="modal__download" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <use href="#icon-download"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="modal__item">
-        <a href="#" download>
-          <span>Съемка видеоролика</span>
-          <svg class="modal__download" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <use href="#icon-download"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="modal__item">
-        <a href="#" download>
-          <span>Создание логотипа</span>
-          <svg class="modal__download" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <use href="#icon-download"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="modal__item">
-        <a href="#" download>
-          <span>Фирменный стиль</span>
-          <svg class="modal__download" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <use href="#icon-download"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="modal__item">
-        <a href="#" download>
-          <span>Нейминг</span>
-          <svg class="modal__download" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <use href="#icon-download"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="modal__item">
-        <a href="#" download>
-          <span>Брендинг с нуля</span>
-          <svg class="modal__download" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <use href="#icon-download"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="modal__item">
-        <a href="#" download>
-          <span>Разработка упаковки</span>
-          <svg class="modal__download" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <use href="#icon-download"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
-    <div class="modal__bottom">
-      <div class="wrapper">
-        <p>Если вдруг, Вы не нашли необходимый бриф, свяжитесь со мной и я с удовольствием отвечу на все интересующие Вас вопросы!</p>
-      </div>
-    </div>
-  </div>
-  
+    
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
@@ -334,8 +336,30 @@
   
 <!-- Modal -->
   <script>
-    $('.btn--brief').click(function() {
+    $('.btn--brief').click(function(evt) {
+      evt.preventDefault();
+      $('.overlay').show();
       $('.modal').addClass('slideInUp');
+      $('body').css('overflow-y', 'hidden');
+      if (window.innerWidth < 766) {
+        $('.screen--promo').css('overflow-y', 'scroll');
+      }
+    });
+    $('.modal__close').click(function() {
+      $('.overlay').hide();
+      $('.modal').removeClass('slideInUp');
+      $('body').css('overflow-y', 'scroll');
+      if (window.innerWidth < 766) {
+        $('.screen--promo').css('overflow-y', 'hidden');
+      }
+    })
+    $('.overlay').click(function() {
+      $('.overlay').hide();
+      $('.modal').removeClass('slideInUp');
+      $('body').css('overflow-y', 'scroll');
+      if (window.innerWidth < 766) {
+        $('.screen--promo').css('overflow-y', 'hidden');
+      }
     })
   </script>
   

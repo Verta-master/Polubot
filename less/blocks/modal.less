@@ -3,44 +3,43 @@
   padding: 0;
   margin: 0;
   position: absolute;
+  z-index: 15;
   bottom: 0;
   left: 0;
   font-family: "Museo Sans", "Arial", sans-serif;
+  background-color: #fff;
+  display: none;
+}
+
+.modal__close {
+  position: absolute;
+  right: 30px;
+  top: 35px;
+  padding-right: 25px;
+  color: #333333;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   
-  .fancybox-close-small {
-    outline: none;
-    right: 30px;
-    top: 25px;
-    
-    &::before {
-      content: "Закрыть";
-      position: absolute;
-      top: 7px;
-      right: 35px;
-      color: #333333;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-    }
-    
-    &::after {
-      color: #333333;
-      font-size: 30px;
-      outline: none;
-    }
-    
-    &:hover,
-    &:active {
-      &::after {
-        background-color: rgba(255,255,255,0);
-        outline: none;
-      }
-    }
+  &::after {
+    content: "+";
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    transform: rotate(45deg);
   }
 }
 
-.fancybox-is-open .fancybox-bg {
-  opacity: 0.5;
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
 }
 
 .modal__list {
@@ -98,9 +97,17 @@
   font-weight: 500;
   padding-top: 30px;
   padding-bottom: 30px;
-  
-  p {
+}
+
+.screen--promo {
+  .modal__bottom p {
     margin: 0;
+    font-size: 13px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #333333;
+    letter-spacing: 0.025em;
+    text-transform: none;
   }
 }
 
@@ -133,6 +140,7 @@
 }
 
 .slideInUp {
+  display: block;
   animation-name: slideInUp;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
